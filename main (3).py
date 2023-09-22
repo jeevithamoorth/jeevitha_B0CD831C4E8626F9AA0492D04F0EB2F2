@@ -1,7 +1,22 @@
-def fact(x):
-  if x==1:
-    return 1;
-  else:
-    return(x*fact(x-1))
-x=int(input("Enter the number"))
-print("The factorial value is",fact(x))
+# Define the Player class
+class Player:
+    def play(self):
+        print("The player is playing cricket.")
+
+# Define the Batsman class, derived from Player
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting.")
+
+# Define the Bowler class, derived from Player
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling.")
+
+# Create objects of Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
+
+# Call the play() method for each object
+batsman.play()
+bowler.play()
